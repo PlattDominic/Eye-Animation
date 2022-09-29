@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Animation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script defer src="./script.js"></script>
+
+    <style>
+        .col-all
+        {
+            height: 20rem;
+        }
+        .col-small 
+        {
+            height: 10rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="p-5">
+        <div class="row">
+            <div id="tl" class="col-5 col-all" onmouseover="DivHover(this);"></div>
+            <div id="t" class="col-2 col-all" onmouseover="DivHover(this);"></div>
+            <div id="tr" class="col-5 col-all" onmouseover="DivHover(this);"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div id="l" class="col-5 col-small" onmouseover="DivHover(this)"></div>
+            <div id="m" class="col-1 d-flex align-items-center justify-content-center" onmouseover="DivHover(this)">
+                <img id="eye-img" src="./img/eye_c.gif" alt="">
+            </div>
+            <div id="r" class="col-5 col-small" onmouseover="DivHover(this)"></div>
+        </div>
+        <div class="row">
+            <div id="bl" class="col-5 col-all" onmouseover="DivHover(this)"></div>
+            <div id="b" class="col-2 col-all" onmouseover="DivHover(this)"></div>
+            <div id="br" class="col-5 col-all" onmouseover="DivHover(this)"></div>
+        </div>
+    </div>
+
+    <!-- <div class="d-flex">
+        <div style="width: 20rem; height: 20rem;"></div>
+        <img src="./img/closed.gif" alt="" style="height: 50px;">
+        <div style="width: 20rem; height: 20rem;"></div>
+    </div> -->
+    
+</body>
+</html>
