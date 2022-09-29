@@ -1,2 +1,2 @@
-# Eye-Animation
+# EyeAnimation
 A HTML and JS project for school
