@@ -16,37 +16,38 @@
         }
         .col-small 
         {
-            height: 10rem;
+            height: 5rem;
         }
     </style>
 </head>
 <body>
 
+    <!-- Will be container for main content of page -->
     <div class="p-5">
+        <!-- Will contain divs for eye top hover movement -->
         <div class="row">
-            <div id="tl" class="col-5 col-all" onmouseover="DivHover(this);"></div>
-            <div id="t" class="col-2 col-all" onmouseover="DivHover(this);"></div>
-            <div id="tr" class="col-5 col-all" onmouseover="DivHover(this);"></div>
+            <div id="1" class="col-5 col-all" onmouseover="DivHover(this);"></div>
+            <div id="2" class="col-2 col-all" onmouseover="DivHover(this);"></div>
+            <div id="3" class="col-5 col-all" onmouseover="DivHover(this);"></div>
         </div>
+        <!-- Will contain divs for eye middle hover movement  -->
         <div class="row justify-content-center">
-            <div id="l" class="col-5 col-small" onmouseover="DivHover(this)"></div>
-            <div id="m" class="col-1 d-flex align-items-center justify-content-center" onmouseover="DivHover(this)">
-                <img id="eye-img" src="./img/eye_c.gif" alt="">
+            <div id="4" class="col-5 col-small" onmouseover="DivHover(this)"></div>
+            <div id="5" class="col-1 d-flex align-items-center justify-content-center" onmouseover="DivHover(this)">
+                <img class="eye-img" src="./img/5.gif" alt="">
+                <img class="eye-img mx-1" src="./img/5.gif" alt="">
             </div>
-            <div id="r" class="col-5 col-small" onmouseover="DivHover(this)"></div>
+            <div id="6" class="col-5 col-small" onmouseover="DivHover(this)"></div>
         </div>
+        <!-- Will contain divs for eye bottom hover movement -->
         <div class="row">
-            <div id="bl" class="col-5 col-all" onmouseover="DivHover(this)"></div>
-            <div id="b" class="col-2 col-all" onmouseover="DivHover(this)"></div>
-            <div id="br" class="col-5 col-all" onmouseover="DivHover(this)"></div>
+            <div id="7" class="col-5 col-all" onmouseover="DivHover(this)"></div>
+            <div id="8" class="col-2 col-all" onmouseover="DivHover(this)"></div>
+            <div id="9" class="col-5 col-all" onmouseover="DivHover(this)"></div>
         </div>
     </div>
 
-    <!-- <div class="d-flex">
-        <div style="width: 20rem; height: 20rem;"></div>
-        <img src="./img/closed.gif" alt="" style="height: 50px;">
-        <div style="width: 20rem; height: 20rem;"></div>
-    </div> -->
+   
     
 </body>
 </html>

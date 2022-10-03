@@ -1,3 +1,4 @@
+// All div objects that surround the eye element
 let divTL = document.getElementById('tl');
 let divT = document.getElementById('t');
 let divTR = document.getElementById('tr');
@@ -8,65 +9,48 @@ let divBL = document.getElementById('bl');
 let divB = document.getElementById('b');
 let divBR = document.getElementById('br');
 
-let eyeImage = document.getElementById('eye-img');
+// Both of the eye image elements
+let eyeImages =  document.querySelectorAll('.eye-img');
+
 let isBlinking = false;
-let eyeImages = ['eye_c.gif', 'eye_cl.gif', 'eye_cr.gif', 'eye_lc.gif', 'eye_ll.gif', 'eye_lr.gif', 'eye_uc.gif', 'eye_ul.gif', 'eye_ur.gif'];
 
-
-
+// Will be called when user hovers over any of the eye surrounding divs
 DivHover = (div) => {
-
+    // Make sure that the eye image is not currently in a blinking state
     if (isBlinking) 
         return;
 
-    if (div.id == 'tl') {
-        eyeImage.src = './img/eye_ul.gif';
-    }
-    else if (div.id == 't') {
-        eyeImage.src = './img/eye_uc.gif';
-    }
-    else if (div.id == 'tr') {
-        eyeImage.src = './img/eye_ur.gif';
-    }
-    else if (div.id == 'l') {
-        eyeImage.src = './img/eye_cl.gif';
-    }
-    else if (div.id =='m') {
-        eyeImage.src = './img/eye_c.gif';
-    }
-    else if (div.id == 'r') {
-        eyeImage.src = './img/eye_cr.gif';
-    }
-    else if (div.id == 'bl') {
-        eyeImage.src = './img/eye_ll.gif';
-    }
-    else if (div.id == 'b') {
-        eyeImage.src = './img/eye_lc.gif';
-    }
-    else if (div.id == 'br') {
-        eyeImage.src = './img/eye_lr.gif';
-    }
+    // Iterate through both of the eye images and change their source using the 
+    // 'number' id of the passed div, to determine which image file to use
+    eyeImages.forEach((element) => {
+        element.src = `./img/${div.id}.gif`
+    })
 }
 
-// setTimeout(RandomEyeMovement, 6000);
-
-// function RandomEyeMovement() {
-//     let randImg = eyeImages[Math.floor(Math.random()*eyeImages.length)];
-//     eyeImage.src = './img/' + randImg;
-
-//     setTimeout(RandomEyeMovement, 6000);
-// }
-
-
+// Start eye blink timeout loop
 setTimeout(EyeBlink, 4000)
 
+// Will be called in a timeout and will change both of the eye images to a 
+// close eye image
 function EyeBlink() {
-    eyeImage.src = './img/closed.gif';
+    // Iterate through both of the eye images and change their source to closed eye image
+    eyeImages.forEach((element) => {
+        element.src = './img/closed.gif';
+    })
+    // Set isBlinking to true so eye image can't be change when eye is blinking
     isBlinking = true;
+    // Start timeout for open eye state
     setTimeout(EyeOpen, 500);
 }
+// Will be called in a timeout and will change both of the eye images to a 
+// open eye state
 function EyeOpen() {
-    eyeImage.src = './img/eye_c.gif';
+    // Iterate through both of the eye images and change their source to open eye image
+    eyeImages.forEach((element) => {
+        element.src = './img/5.gif';
+    })
+    // Set isBlinking to false so eye image can be change again
     isBlinking = false;
+    // Start timeout for closed eye state
     setTimeout(EyeBlink, 4000);
 };
