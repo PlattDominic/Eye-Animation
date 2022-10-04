@@ -12,7 +12,11 @@ let divBR = document.getElementById('br');
 // Both of the eye image elements
 let eyeImages =  document.querySelectorAll('.eye-img');
 
+// isBlinking will be used to determine if eye image should change or not depending on if eye is blinking or not
 let isBlinking = false;
+
+// currentNumber will be used to set last eye image in eyeOpen function
+let currentEyeNumber;
 
 // Will be called when user hovers over any of the eye surrounding divs
 DivHover = (div) => {
@@ -25,6 +29,9 @@ DivHover = (div) => {
     eyeImages.forEach((element) => {
         element.src = `./img/${div.id}.gif`
     })
+
+    // Set the current eye image number for eyeOpen function
+    currentEyeNumber = div.id;
 }
 
 // Start eye blink timeout loop
@@ -45,9 +52,9 @@ function EyeBlink() {
 // Will be called in a timeout and will change both of the eye images to a 
 // open eye state
 function EyeOpen() {
-    // Iterate through both of the eye images and change their source to open eye image
+    // Iterate through both of the eye images and change their source to last eye image before blink
     eyeImages.forEach((element) => {
-        element.src = './img/5.gif';
+        element.src = `./img/${currentEyeNumber}.gif`;
     })
     // Set isBlinking to false so eye image can be change again
     isBlinking = false;
